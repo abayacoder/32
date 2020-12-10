@@ -6,7 +6,7 @@ const Constraint = Matter.Constraint;
 var engine, world;
 var stand1, stand1, ground1;
 var box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14, box15, box16, box17, box18;
-var polygon1, slingShot;
+var polygon1, slingShot,polygen.png;
 var score = 0;
 var backgroundImg;
 var gameState = "on slingshot";
@@ -14,7 +14,8 @@ var bg = "Sprites/bg.jpg";
 
 function preload() {
   getBackgroundImg();
-  backgroundImg = loadImage("Sprites/bg.jpg");
+  backgroundImg = loadImage("bg.jpg");
+  polygen1=loadImage("polygen.png");
 }
 
 function setup() {
@@ -139,22 +140,10 @@ async function getBackgroundImg() {
   var date = responseJSON.datetime;
   var hour = date.slice(11, 13);
   if(hour>=06 && hour<=19){
-      bg = "Sprites/bg.jpg"
+      bg = "bg.jpg"
   } else {
-      bg = "Sprites/bg1.jpg"
-  }
+      bg = "bg1.jpg"
   backgroundImg = loadImage(bg);
   console.log(backgroundImg);
 }
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
